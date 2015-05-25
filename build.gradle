@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+repositories {
+    jcenter()
+}
+
+jar {
+    baseName = 'Calculator'
+    version = '1.0'
+    mainClassName = 'com.arcana.calculator.Calculator'
+
+    manifest {
+        attributes("Main-Class": mainClassName)
+    }
+}
+
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.12'
+
+    testCompile 'junit:junit:4.12'
+}

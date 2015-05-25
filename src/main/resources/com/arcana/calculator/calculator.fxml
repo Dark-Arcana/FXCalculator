@@ -6,7 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="375.0" maxWidth="300.0" minHeight="375.0" minWidth="300.0" prefHeight="375.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.45" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Calculator">
+<AnchorPane maxHeight="375.0" maxWidth="300.0" minHeight="375.0" minWidth="300.0" prefHeight="375.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.45" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.arcana.calculator.Calculator">
    <children>
       <Label fx:id="equationLabel" alignment="BASELINE_RIGHT" depthTest="DISABLE" layoutY="40.0" prefHeight="45.0" prefWidth="300.0" text="" AnchorPane.bottomAnchor="250.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
          <padding>
