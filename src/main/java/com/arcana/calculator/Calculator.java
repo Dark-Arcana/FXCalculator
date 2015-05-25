@@ -20,12 +20,27 @@ public class Calculator extends Application {
 	private String equationLeft;
 	private String equationRight;
 	private String operator;
+	
 	private boolean opUsed = false;
 	
 	private double output;
+	private Double equationDouble;
 	private int outputInt;
 	private int equationInt;
-	private Double equationDouble;
+	
+	@FXML
+	Button buttonOne, buttonTwo, buttonThree,
+		   buttonFour, buttonFive, buttonSix,
+		   buttonSeven, buttonEight, buttonNine,
+		   buttonZero, buttonDecimal, buttonClear,
+		   buttonDivide, buttonMultiply, buttonSubtract,
+		   buttonAdd, buttonEnter;
+	
+	@FXML
+	Label equationLabel, outputLabel;
+	
+	@FXML
+	MenuItem closeMenu;
 	
 	public static void main(String[] args) {
 		Application.launch(args);
@@ -46,20 +61,6 @@ public class Calculator extends Application {
 		}
 	}
 
-	@FXML
-	Button buttonOne, buttonTwo, buttonThree,
-		   buttonFour, buttonFive, buttonSix,
-		   buttonSeven, buttonEight, buttonNine,
-		   buttonZero, buttonDecimal, buttonClear,
-		   buttonDivide, buttonMultiply, buttonSubtract,
-		   buttonAdd, buttonEnter;
-	
-	@FXML
-	Label equationLabel, outputLabel;
-	
-	@FXML
-	MenuItem closeMenu;
-	
 	public void setEquationText(String text) {
 		equationLabel.setText(text);
 	}
@@ -67,15 +68,34 @@ public class Calculator extends Application {
 	public void setOutputText(String text) {
 		outputLabel.setText(text);
 	}
+
+	public void textProcessor() {
+		equationDouble = (double) Double.parseDouble(equationLeft);
+		equationInt = equationDouble.intValue();
+		
+		if (equationInt == equationDouble) {
+			setEquationText(String.valueOf(equationInt) + " " + operator);
+		}
+		else {
+			setEquationText(equationLeft + " " + operator);
+		}
+	}
 	
 	@FXML
-	public void buttonOnePressed(ActionEvent e) {
+	public void closePressed(ActionEvent e) {
+		Platform.exit();
+	}
+	
+	@FXML
+	public void buttonPressed(ActionEvent e) {
+		Button button = (Button) e.getSource();
+		String buttonText = button.getText();
 		
 		if (!opUsed) {
 			if (equationLeft != null) {
-				equationLeft += "1";	
+				equationLeft += buttonText;	
 			} else {
-				equationLeft = "1";
+				equationLeft = buttonText;
 				equationDouble = (double) Double.parseDouble(equationLeft);
 				equationInt = equationDouble.intValue();
 			}
@@ -83,261 +103,9 @@ public class Calculator extends Application {
 		}
 		else if (opUsed) {
 			if (equationRight != null) {
-				equationRight += "1";	
+				equationRight += buttonText;	
 			} else {
-				equationRight = "1";
-			}
-			if (equationInt == equationDouble) {
-				setEquationText(String.valueOf(equationInt) + " " + operator + " " + equationRight); 
-			}
-			else {
-				setEquationText(equationLeft + " " + operator + " " + equationRight);
-			}
-		}
-	}
-	
-	@FXML
-	public void buttonTwoPressed(ActionEvent e) {
-		
-		if (!opUsed) {
-			if (equationLeft != null) {
-				equationLeft += "2";	
-			} else {
-				equationLeft = "2";
-				equationDouble = (double) Double.parseDouble(equationLeft);
-				equationInt = equationDouble.intValue();
-			}
-			setEquationText(equationLeft);
-		}
-		else if (opUsed) {
-			if (equationRight != null) {
-				equationRight += "2";	
-			} else {
-				equationRight = "2";
-			}
-			if (equationInt == equationDouble) {
-				setEquationText(String.valueOf(equationInt) + " " + operator + " " + equationRight); 
-			}
-			else {
-				setEquationText(equationLeft + " " + operator + " " + equationRight);
-			}
-		}
-	}
-	
-	@FXML
-	public void buttonThreePressed(ActionEvent e) {
-		
-		if (!opUsed) {
-			if (equationLeft != null) {
-				equationLeft += "3";	
-			} else {
-				equationLeft = "3";
-				equationDouble = (double) Double.parseDouble(equationLeft);
-				equationInt = equationDouble.intValue();
-			}
-			setEquationText(equationLeft);
-		}
-		else if (opUsed) {
-			if (equationRight != null) {
-				equationRight += "3";	
-			} else {
-				equationRight = "3";
-			}
-			if (equationInt == equationDouble) {
-				setEquationText(String.valueOf(equationInt) + " " + operator + " " + equationRight); 
-			}
-			else {
-				setEquationText(equationLeft + " " + operator + " " + equationRight);
-			}
-		}
-	}
-	
-	@FXML
-	public void buttonFourPressed(ActionEvent e) {
-		
-		if (!opUsed) {
-			if (equationLeft != null) {
-				equationLeft += "4";	
-			} else {
-				equationLeft = "4";
-				equationDouble = (double) Double.parseDouble(equationLeft);
-				equationInt = equationDouble.intValue();
-			}
-			setEquationText(equationLeft);
-		}
-		else if (opUsed) {
-			if (equationRight != null) {
-				equationRight += "4";	
-			} else {
-				equationRight = "4";
-			}
-			if (equationInt == equationDouble) {
-				setEquationText(String.valueOf(equationInt) + " " + operator + " " + equationRight); 
-			}
-			else {
-				setEquationText(equationLeft + " " + operator + " " + equationRight);
-			}
-		}
-	}
-	
-	@FXML
-	public void buttonFivePressed(ActionEvent e) {
-		
-		if (!opUsed) {
-			if (equationLeft != null) {
-				equationLeft += "5";	
-			} else {
-				equationLeft = "5";
-				equationDouble = (double) Double.parseDouble(equationLeft);
-				equationInt = equationDouble.intValue();
-			}
-			setEquationText(equationLeft);
-		}
-		else if (opUsed) {
-			if (equationRight != null) {
-				equationRight += "5";	
-			} else {
-				equationRight = "5";
-			}
-			if (equationInt == equationDouble) {
-				setEquationText(String.valueOf(equationInt) + " " + operator + " " + equationRight); 
-			}
-			else {
-				setEquationText(equationLeft + " " + operator + " " + equationRight);
-			}
-		}
-	}
-	
-	@FXML
-	public void buttonSixPressed(ActionEvent e) {
-		
-		if (!opUsed) {
-			if (equationLeft != null) {
-				equationLeft += "6";	
-			} else {
-				equationLeft = "6";
-				equationDouble = (double) Double.parseDouble(equationLeft);
-				equationInt = equationDouble.intValue();
-			}
-			setEquationText(equationLeft);
-		}
-		else if (opUsed) {
-			if (equationRight != null) {
-				equationRight += "6";	
-			} else {
-				equationRight = "6";
-			}
-			if (equationInt == equationDouble) {
-				setEquationText(String.valueOf(equationInt) + " " + operator + " " + equationRight); 
-			}
-			else {
-				setEquationText(equationLeft + " " + operator + " " + equationRight);
-			}
-		}
-	}
-	
-	@FXML
-	public void buttonSevenPressed(ActionEvent e) {
-		
-		if (!opUsed) {
-			if (equationLeft != null) {
-				equationLeft += "7";	
-			} else {
-				equationLeft = "7";
-				equationDouble = (double) Double.parseDouble(equationLeft);
-				equationInt = equationDouble.intValue();
-			}
-			setEquationText(equationLeft);
-		}
-		else if (opUsed) {
-			if (equationRight != null) {
-				equationRight += "7";	
-			} else {
-				equationRight = "7";
-			}
-			if (equationInt == equationDouble) {
-				setEquationText(String.valueOf(equationInt) + " " + operator + " " + equationRight); 
-			}
-			else {
-				setEquationText(equationLeft + " " + operator + " " + equationRight);
-			}
-		}
-	}
-	
-	@FXML
-	public void buttonEightPressed(ActionEvent e) {
-		
-		if (!opUsed) {
-			if (equationLeft != null) {
-				equationLeft += "8";	
-			} else {
-				equationLeft = "8";
-				equationDouble = (double) Double.parseDouble(equationLeft);
-				equationInt = equationDouble.intValue();
-			}
-			setEquationText(equationLeft);
-		}
-		else if (opUsed) {
-			if (equationRight != null) {
-				equationRight += "8";	
-			} else {
-				equationRight = "8";
-			}
-			if (equationInt == equationDouble) {
-				setEquationText(String.valueOf(equationInt) + " " + operator + " " + equationRight); 
-			}
-			else {
-				setEquationText(equationLeft + " " + operator + " " + equationRight);
-			}
-		}
-	}
-	
-	@FXML
-	public void buttonNinePressed(ActionEvent e) {
-		
-		if (!opUsed) {
-			if (equationLeft != null) {
-				equationLeft += "9";	
-			} else {
-				equationLeft = "9";
-				equationDouble = (double) Double.parseDouble(equationLeft);
-				equationInt = equationDouble.intValue();
-			}
-			setEquationText(equationLeft);
-		}
-		else if (opUsed) {
-			if (equationRight != null) {
-				equationRight += "9";	
-			} else {
-				equationRight = "9";
-			}
-			if (equationInt == equationDouble) {
-				setEquationText(String.valueOf(equationInt) + " " + operator + " " + equationRight); 
-			}
-			else {
-				setEquationText(equationLeft + " " + operator + " " + equationRight);
-			}
-		}
-	}
-	
-	@FXML
-	public void buttonZeroPressed(ActionEvent e) {
-		
-		if (!opUsed) {
-			if (equationLeft != null && !equationLeft.equals("0")) {
-				equationLeft += "0";	
-			} else {
-				equationLeft = "0";
-				equationDouble = (double) Double.parseDouble(equationLeft);
-				equationInt = equationDouble.intValue();
-			}
-			setEquationText(equationLeft);
-		}
-		else if (opUsed) {
-			if (equationRight != null && !equationRight.equals("0")) {
-				equationRight += "0";	
-			} else {
-				equationRight = "0";
+				equationRight = buttonText;
 			}
 			if (equationInt == equationDouble) {
 				setEquationText(String.valueOf(equationInt) + " " + operator + " " + equationRight); 
@@ -391,15 +159,7 @@ public class Calculator extends Application {
 			operator = "/";
 		}
 		
-		equationDouble = (double) Double.parseDouble(equationLeft);
-		equationInt = equationDouble.intValue();
-		
-		if (equationInt == equationDouble) {
-			setEquationText(String.valueOf(equationInt) + " " + operator);
-		}
-		else {
-			setEquationText(equationLeft + " " + operator);
-		}
+		textProcessor();
 	}
 	
 	@FXML
@@ -409,15 +169,7 @@ public class Calculator extends Application {
 			operator = "*";
 		}
 		
-		equationDouble = (double) Double.parseDouble(equationLeft);
-		equationInt = equationDouble.intValue();
-		
-		if (equationInt == equationDouble) {
-			setEquationText(String.valueOf(equationInt) + " " + operator);
-		}
-		else {
-			setEquationText(equationLeft + " " + operator);
-		}
+		textProcessor();
 	}
 	
 	@FXML
@@ -427,15 +179,7 @@ public class Calculator extends Application {
 			operator = "-";
 		}
 		
-		equationDouble = (double) Double.parseDouble(equationLeft);
-		equationInt = equationDouble.intValue();
-		
-		if (equationInt == equationDouble) {
-			setEquationText(String.valueOf(equationInt) + " " + operator);
-		}
-		else {
-			setEquationText(equationLeft + " " + operator);
-		}
+		textProcessor();
 	}
 	
 	@FXML
@@ -445,15 +189,7 @@ public class Calculator extends Application {
 			operator = "+";
 		}
 		
-		equationDouble = (double) Double.parseDouble(equationLeft);
-		equationInt = equationDouble.intValue();
-		
-		if (equationInt == equationDouble) {
-			setEquationText(String.valueOf(equationInt) + " " + operator);
-		}
-		else {
-			setEquationText(equationLeft + " " + operator);
-		}
+		textProcessor();
 	}
 	
 	@FXML
@@ -521,10 +257,5 @@ public class Calculator extends Application {
 					break;
 			}
 		}
-	}
-	
-	@FXML
-	public void closePressed(ActionEvent e) {
-		Platform.exit();
 	}
 }

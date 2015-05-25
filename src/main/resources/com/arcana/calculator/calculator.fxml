@@ -13,35 +13,35 @@
             <Insets right="20.0" />
          </padding>
       </Label>
-      <Button fx:id="buttonZero" depthTest="DISABLE" layoutY="300.0" mnemonicParsing="false" onAction="#buttonZeroPressed" prefHeight="50.0" prefWidth="150.0" text="0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="325.0">
+      <Button fx:id="buttonZero" depthTest="DISABLE" layoutY="300.0" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="150.0" text="0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="325.0">
       </Button>
-      <Button fx:id="buttonOne" depthTest="DISABLE" layoutY="250.0" mnemonicParsing="false" onAction="#buttonOnePressed" prefHeight="50.0" prefWidth="75.0" text="1" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="275.0">
+      <Button fx:id="buttonOne" depthTest="DISABLE" layoutY="250.0" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="75.0" text="1" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="275.0">
       </Button>
-      <Button fx:id="buttonFour" depthTest="DISABLE" layoutY="200.0" mnemonicParsing="false" onAction="#buttonFourPressed" prefHeight="50.0" prefWidth="75.0" text="4" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="225.0">
+      <Button fx:id="buttonFour" depthTest="DISABLE" layoutY="200.0" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="75.0" text="4" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="225.0">
       </Button>
-      <Button fx:id="buttonSeven" depthTest="DISABLE" layoutY="150.0" mnemonicParsing="false" onAction="#buttonSevenPressed" prefHeight="50.0" prefWidth="75.0" text="7" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="175.0">
+      <Button fx:id="buttonSeven" depthTest="DISABLE" layoutY="150.0" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="75.0" text="7" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="175.0">
       </Button>
-      <Button fx:id="buttonTwo" depthTest="DISABLE" layoutX="75.0" layoutY="250.0" mnemonicParsing="false" onAction="#buttonTwoPressed" prefHeight="50.0" prefWidth="75.0" text="2" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="275.0">
+      <Button fx:id="buttonTwo" depthTest="DISABLE" layoutX="75.0" layoutY="250.0" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="75.0" text="2" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="275.0">
       </Button>
-      <Button fx:id="buttonThree" depthTest="DISABLE" layoutX="150.0" layoutY="250.0" mnemonicParsing="false" onAction="#buttonThreePressed" prefHeight="50.0" prefWidth="75.0" text="3" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="275.0">
+      <Button fx:id="buttonThree" depthTest="DISABLE" layoutX="150.0" layoutY="250.0" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="75.0" text="3" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="275.0">
       </Button>
       <Button fx:id="buttonEnter" depthTest="DISABLE" layoutX="225.0" layoutY="250.0" mnemonicParsing="false" onAction="#buttonEnterPressed" prefHeight="100.0" prefWidth="75.0" text="&lt;-" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="275.0">
       </Button>
-      <Button fx:id="buttonFive" depthTest="DISABLE" layoutX="75.0" layoutY="200.0" mnemonicParsing="false" onAction="#buttonFivePressed" prefHeight="50.0" prefWidth="75.0" text="5" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="225.0">
+      <Button fx:id="buttonFive" depthTest="DISABLE" layoutX="75.0" layoutY="200.0" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="75.0" text="5" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="225.0">
       </Button>
       <Button fx:id="buttonClear" depthTest="DISABLE" layoutY="100.0" mnemonicParsing="false" onAction="#buttonClearPressed" prefHeight="50.0" prefWidth="75.0" text="C" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="125.0">
       </Button>
       <Button fx:id="buttonDivide" depthTest="DISABLE" layoutX="75.0" layoutY="100.0" mnemonicParsing="false" onAction="#buttonDividePressed" prefHeight="50.0" prefWidth="75.0" text="/" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="125.0">
       </Button>
-      <Button fx:id="buttonEight" depthTest="DISABLE" layoutX="75.0" layoutY="150.0" mnemonicParsing="false" onAction="#buttonEightPressed" prefHeight="50.0" prefWidth="75.0" text="8" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="175.0">
+      <Button fx:id="buttonEight" depthTest="DISABLE" layoutX="75.0" layoutY="150.0" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="75.0" text="8" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="175.0">
       </Button>
       <Button fx:id="buttonMultiply" depthTest="DISABLE" layoutX="150.0" layoutY="100.0" mnemonicParsing="false" onAction="#buttonMultiplyPressed" prefHeight="50.0" prefWidth="75.0" text="*" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="125.0">
       </Button>
       <Button fx:id="buttonSubtract" depthTest="DISABLE" layoutX="225.0" layoutY="100.0" mnemonicParsing="false" onAction="#buttonSubtractPressed" prefHeight="50.0" prefWidth="75.0" text="-" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="125.0">
       </Button>
-      <Button fx:id="buttonNine" depthTest="DISABLE" layoutX="150.0" layoutY="150.0" mnemonicParsing="false" onAction="#buttonNinePressed" prefHeight="50.0" prefWidth="75.0" text="9" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="175.0">
+      <Button fx:id="buttonNine" depthTest="DISABLE" layoutX="150.0" layoutY="150.0" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="75.0" text="9" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="175.0">
       </Button>
-      <Button fx:id="buttonSix" depthTest="DISABLE" layoutX="150.0" layoutY="200.0" mnemonicParsing="false" onAction="#buttonSixPressed" prefHeight="50.0" prefWidth="75.0" text="6" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="225.0">
+      <Button fx:id="buttonSix" depthTest="DISABLE" layoutX="150.0" layoutY="200.0" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="75.0" text="6" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="225.0">
       </Button>
       <Button fx:id="buttonAdd" depthTest="DISABLE" layoutX="225.0" layoutY="150.0" mnemonicParsing="false" onAction="#buttonAddPressed" prefHeight="100.0" prefWidth="75.0" text="+" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="175.0">
       </Button>
@@ -56,7 +56,7 @@
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
-              <MenuItem fx:id="closeMenu" mnemonicParsing="false" text="Close" onAction="#closePressed" />
+              <MenuItem fx:id="closeMenu" mnemonicParsing="false" onAction="#closePressed" text="Close" />
             </items>
           </Menu>
         </menus>
